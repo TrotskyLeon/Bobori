@@ -41,7 +41,8 @@ struct DashboardView: View {
                     .tag(0)
                     
                     NavigationView {
-                        InformationComponent()
+                        InformationComponent(name: $name)
+//                        CardView()
                     }
                     .tabItem {
                         Label("Information", systemImage: "info")

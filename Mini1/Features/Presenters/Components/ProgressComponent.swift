@@ -59,7 +59,7 @@ struct ProgressComponent: View {
             EditProfileView(showProfile: $showProfile, name: $name, time: $time)
         }
         .sheet(isPresented: $showMusic) {
-            MusicPlayerView(musicPlayerViewModel: musicPlayerViewModel, showMusic: $showMusic, playMusic: $playMusic)
+            MusicPlayerView(musicPlayerViewModel: musicPlayerViewModel, showMusic: $showMusic, playMusic: $playMusic, name: $name)
         }
     }
 }

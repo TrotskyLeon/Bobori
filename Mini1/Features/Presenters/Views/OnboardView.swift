@@ -169,7 +169,7 @@ struct Form2View: View {
                     .foregroundColor(.white)
                     .padding(.top, 50)
                 if name.isEmpty {
-                    Text("What time does your baby sleep")
+                    Text("What time does your baby sleep?")
                         .multilineTextAlignment(.center)
                         .frame(width: 242, height: 55)
                         .font(.system(size: 21))
@@ -177,7 +177,7 @@ struct Form2View: View {
                         .padding(.bottom, 65)
                         .foregroundColor(.white)
                 } else {
-                    Text("What time does \(name) sleep")
+                    Text("What time does \(name) sleep?")
                         .multilineTextAlignment(.center)
                         .frame(width: 242, height: 55)
                         .font(.system(size: 21))
