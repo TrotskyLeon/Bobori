@@ -18,6 +18,9 @@
 		04BA739829FCE565005354C5 /* EventKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA739729FCE565005354C5 /* EventKitManager.swift */; };
 		04BA739A29FCE56F005354C5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA739929FCE56F005354C5 /* CoreDataManager.swift */; };
 		04BA73D629FCEF66005354C5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 04BA73D529FCEF66005354C5 /* FSCalendar */; };
+		04D178BE2A04F24100451FFC /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D178BD2A04F24100451FFC /* AnimationView.swift */; };
+		04D178C02A04F2AF00451FFC /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D178BF2A04F2AF00451FFC /* AnimationViewModel.swift */; };
+		04D178C22A04F2E600451FFC /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D178C12A04F2E600451FFC /* AnimationModel.swift */; };
 		04E8233529F594E700F6C73E /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8233429F594E700F6C73E /* EditProfileView.swift */; };
 		04E8233729F5954200F6C73E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8233629F5954200F6C73E /* ProfileViewModel.swift */; };
 		2A53E50D2A00B21C008E120A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A53E50C2A00B21C008E120A /* Assets.xcassets */; };
@@ -71,6 +74,9 @@
 		04B8A2232A0213AD00B6380A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		04BA739729FCE565005354C5 /* EventKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitManager.swift; sourceTree = "<group>"; };
 		04BA739929FCE56F005354C5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		04D178BD2A04F24100451FFC /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		04D178BF2A04F2AF00451FFC /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
+		04D178C12A04F2E600451FFC /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 		04E8233429F594E700F6C73E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		04E8233629F5954200F6C73E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		04E8233829F5960400F6C73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			children = (
 				0463C3122A0174EF00E8F7D0 /* RowView.swift */,
 				04B8A2232A0213AD00B6380A /* CalendarView.swift */,
+				04D178BD2A04F24100451FFC /* AnimationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +186,6 @@
 		04C4B5E829F5A91D00761974 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04C4B5F629F5AAF300761974 /* Constant */,
 				04C4B5F229F5AA1200761974 /* Resources */,
 				04BA739429FCE53A005354C5 /* Utilities */,
 				04C4B5F729F5AAF800761974 /* Themes */,
@@ -204,6 +210,7 @@
 				53795DFE29F457ED000B1BB4 /* ProgressViewModel.swift */,
 				04E8233629F5954200F6C73E /* ProfileViewModel.swift */,
 				0463C30C2A0163C300E8F7D0 /* EntryViewModel.swift */,
+				04D178BF2A04F2AF00451FFC /* AnimationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 			children = (
 				0405D7C92A0223310065F167 /* Model.xcdatamodeld */,
 				0463C30A2A01637800E8F7D0 /* Entry+Convenience.swift */,
+				04D178C12A04F2E600451FFC /* AnimationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,17 +270,9 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		04C4B5F629F5AAF300761974 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		04C4B5F729F5AAF800761974 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				83CBC3DF29FD168400E16050 /* Colors */,
 				83CBC3E029FD168E00E16050 /* Presenters */,
 			);
 			path = Themes;
@@ -334,13 +334,6 @@
 				537FD5C329EE2E4A001E6321 /* Mini1UITestsLaunchTests.swift */,
 			);
 			path = Mini1UITests;
-			sourceTree = "<group>";
-		};
-		83CBC3DF29FD168400E16050 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		83CBC3E029FD168E00E16050 /* Presenters */ = {
@@ -502,6 +495,7 @@
 				539A88B429FFE05B0065224A /* MusicPlayerViewModel.swift in Sources */,
 				04B8A2242A0213AD00B6380A /* CalendarView.swift in Sources */,
 				53795DFD29F457D2000B1BB4 /* DashboardViewModel.swift in Sources */,
+				04D178C02A04F2AF00451FFC /* AnimationViewModel.swift in Sources */,
 				0463C30D2A0163C300E8F7D0 /* EntryViewModel.swift in Sources */,
 				0463C30B2A01637800E8F7D0 /* Entry+Convenience.swift in Sources */,
 				53795DF929F45100000B1BB4 /* InformationComponent.swift in Sources */,
@@ -510,6 +504,7 @@
 				537FD5A729EE2E49001E6321 /* Mini1App.swift in Sources */,
 				0463C3112A01726800E8F7D0 /* DateModifier.swift in Sources */,
 				0463C3172A01755800E8F7D0 /* HistoryView.swift in Sources */,
+				04D178BE2A04F24100451FFC /* AnimationView.swift in Sources */,
 				539A88B029FFD2510065224A /* MusicPlayerView.swift in Sources */,
 				04BA739A29FCE56F005354C5 /* CoreDataManager.swift in Sources */,
 				53795DFB29F45368000B1BB4 /* DashboardView.swift in Sources */,
@@ -517,6 +512,7 @@
 				53795DF729F450F4000B1BB4 /* ProgressComponent.swift in Sources */,
 				539A88B229FFDDDC0065224A /* MusicPlayerModel.swift in Sources */,
 				53795DFF29F457ED000B1BB4 /* ProgressViewModel.swift in Sources */,
+				04D178C22A04F2E600451FFC /* AnimationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

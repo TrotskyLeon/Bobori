@@ -17,14 +17,31 @@ struct OnboardView: View {
     
     let paleBlue = Color(UIColor(named: "paleBlue")!)
     
+    @EnvironmentObject var viewModel: AnimationViewModel
+    
     var body: some View {
         ZStack {
             Color("paleBlue")
             
             VStack {
                 if currentPageIndex == 0 {
-                    Form1View(name: $name)
-                        .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+//                    Form1View(name: $name)
+//                    Form1View(name: $name, date: timeline.date)
+//                        .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+//                        .environmentObject(viewModel)
+                    
+                    
+                    
+                    TimelineView(.periodic(from: .now, by: 0.1)){
+                        timeline in
+                        Form1View(name: $name, date: timeline.date)
+                            .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+                            .environmentObject(viewModel)
+                        
+                    }
+                    
+                    
+                    
                 } else if currentPageIndex == 1 {
                     Form2View(time: $time, name: $name)
                         .transition(.asymmetric(insertion: .opacity, removal: .opacity))
@@ -111,14 +128,36 @@ struct Form1View: View {
     @State private var showForm2View = false
     let paleBlue = Color(UIColor(named: "paleBlue")!)
     
+    @EnvironmentObject var viewModel: AnimationViewModel
+    @State var index: Int = 0
+    let date: Date
+    
+    
     var body: some View {
         ZStack{
             paleBlue.edgesIgnoringSafeArea(.all)
             VStack{
-                Image("placeholder")
+//                Image("placeholder")
+//                    .resizable()
+//                    .frame(width: 112, height: 112)
+//                    .padding(.top)
+                
+//                Image("dua-0")
+                
+                Image(uiImage: UIImage(named: viewModel.data[viewModel.index].animationImageNames[self.index])!)
                     .resizable()
-                    .frame(width: 112, height: 112)
-                    .padding(.top)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+                    .onAppear {
+                        playAnimation()
+                    }
+                    .onChange(of: self.date) { _ in
+                        playAnimation()
+                    }
+                    .frame(width: 300, height: 300)
+                    .scaledToFit()
+                
+                
                 Text("Welcome!")
                     .font(.system(size: 32))
                     .foregroundColor(.white)
@@ -141,6 +180,16 @@ struct Form1View: View {
             }
         }
     }
+    
+    func playAnimation() {
+        if self.index < viewModel.data[viewModel.index].length - 1 {
+            self.index += 1
+        } else {
+            self.index = 0
+            
+        }
+    }
+
 }
 
 struct Form2View: View {
