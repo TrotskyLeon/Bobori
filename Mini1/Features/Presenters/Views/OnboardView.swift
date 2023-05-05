@@ -115,10 +115,19 @@ struct Form1View: View {
         ZStack{
             paleBlue.edgesIgnoringSafeArea(.all)
             VStack{
-                Image("placeholder")
-                    .resizable()
-                    .frame(width: 112, height: 112)
-                    .padding(.top)
+//                Image("placeholder")
+//                    .resizable()
+//                    .frame(width: 112, height: 112)
+//                    .padding(.top)
+                
+//                LottieView(name: "mshk-image-to-lottie", loopMode: .loop) // bisa
+                LottieView(name: "satu", loopMode: .loop) // bisa
+//                LottieView(name: "dua", loopMode: .loop) // ga bisa
+//                LottieView(name: "tiga", loopMode: .loop) // bisa
+//                LottieView(name: "empat", loopMode: .loop) // ga bisa
+//                LottieView(name: "lima", loopMode: .loop) // ga bisa
+//                LottieView(name: "enam", loopMode: .loop) // bisa
+                
                 Text("Welcome!")
                     .font(.system(size: 32))
                     .foregroundColor(.white)

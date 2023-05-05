@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0405D7CB2A0223310065F167 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0405D7C92A0223310065F167 /* Model.xcdatamodeld */; };
+		043838382A04BA2100E3AC3F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 043838372A04BA2100E3AC3F /* Lottie */; };
+		0438383A2A04BA6900E3AC3F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043838392A04BA6900E3AC3F /* LottieView.swift */; };
 		0463C30B2A01637800E8F7D0 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463C30A2A01637800E8F7D0 /* Entry+Convenience.swift */; };
 		0463C30D2A0163C300E8F7D0 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463C30C2A0163C300E8F7D0 /* EntryViewModel.swift */; };
 		0463C3112A01726800E8F7D0 /* DateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463C3102A01726800E8F7D0 /* DateModifier.swift */; };
@@ -62,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0405D7CA2A0223310065F167 /* SleepRoutine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SleepRoutine.xcdatamodel; sourceTree = "<group>"; };
+		043838392A04BA6900E3AC3F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0463C30A2A01637800E8F7D0 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
 		0463C30C2A0163C300E8F7D0 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		0463C3102A01726800E8F7D0 /* DateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModifier.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 			files = (
 				83FDA1042A0215F000FBD218 /* ACarousel in Frameworks */,
 				04BA73D629FCEF66005354C5 /* FSCalendar in Frameworks */,
+				043838382A04BA2100E3AC3F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,7 @@
 			children = (
 				0463C3122A0174EF00E8F7D0 /* RowView.swift */,
 				04B8A2232A0213AD00B6380A /* CalendarView.swift */,
+				043838392A04BA6900E3AC3F /* LottieView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +184,6 @@
 		04C4B5E829F5A91D00761974 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04C4B5F629F5AAF300761974 /* Constant */,
 				04C4B5F229F5AA1200761974 /* Resources */,
 				04BA739429FCE53A005354C5 /* Utilities */,
 				04C4B5F729F5AAF800761974 /* Themes */,
@@ -262,17 +266,9 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		04C4B5F629F5AAF300761974 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		04C4B5F729F5AAF800761974 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				83CBC3DF29FD168400E16050 /* Colors */,
 				83CBC3E029FD168E00E16050 /* Presenters */,
 			);
 			path = Themes;
@@ -336,13 +332,6 @@
 			path = Mini1UITests;
 			sourceTree = "<group>";
 		};
-		83CBC3DF29FD168400E16050 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		83CBC3E029FD168E00E16050 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +360,7 @@
 			packageProductDependencies = (
 				04BA73D529FCEF66005354C5 /* FSCalendar */,
 				83FDA1032A0215F000FBD218 /* ACarousel */,
+				043838372A04BA2100E3AC3F /* Lottie */,
 			);
 			productName = Mini1;
 			productReference = 537FD5A329EE2E49001E6321 /* Mini1.app */;
@@ -447,6 +437,7 @@
 			packageReferences = (
 				04BA73D429FCEF66005354C5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				83FDA1022A0215F000FBD218 /* XCRemoteSwiftPackageReference "ACarousel" */,
+				043838362A04BA2100E3AC3F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 537FD5A429EE2E49001E6321 /* Products */;
 			projectDirPath = "";
@@ -515,6 +506,7 @@
 				53795DFB29F45368000B1BB4 /* DashboardView.swift in Sources */,
 				0463C3152A01751400E8F7D0 /* ProgressFormView.swift in Sources */,
 				53795DF729F450F4000B1BB4 /* ProgressComponent.swift in Sources */,
+				0438383A2A04BA6900E3AC3F /* LottieView.swift in Sources */,
 				539A88B229FFDDDC0065224A /* MusicPlayerModel.swift in Sources */,
 				53795DFF29F457ED000B1BB4 /* ProgressViewModel.swift in Sources */,
 			);
@@ -851,6 +843,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		043838362A04BA2100E3AC3F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		04BA73D429FCEF66005354C5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
@@ -870,6 +870,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		043838372A04BA2100E3AC3F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043838362A04BA2100E3AC3F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		04BA73D529FCEF66005354C5 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04BA73D429FCEF66005354C5 /* XCRemoteSwiftPackageReference "FSCalendar" */;
